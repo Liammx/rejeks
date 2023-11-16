@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+  }
+
+  form {
+    width: 30%;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    position: relative;
+    transition: 0.5s ease;
+  }
+  form div input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+  }
+  form div::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../error.svg");
+    background-repeat: no-repeat    ;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 38px;
+    right: -25px;
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+
+  form button {
+    padding: 10px;
+    border: 1px solid blue;
+    color: #fff;
+    border-radius: 8px;
+    background-color: blue;
+  }
+
+  .required input {
+    border-color: blue;
+  }
+
+  .errorField {
+    color: red !important;
+  }
+  .errorField input {
+    border-color: red !important;
+  }
+
+  .errorField::after {
+    opacity: 1 !important;
+  }
